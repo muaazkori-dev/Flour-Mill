@@ -102,9 +102,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const serviceNode = document.getElementById('custService');
         const serviceText = serviceNode.options[serviceNode.selectedIndex].text;
         const weight = document.getElementById('custWeight').value.trim();
+        const deliveryNode = document.getElementById('custDelivery');
+        const deliveryText = deliveryNode.options[deliveryNode.selectedIndex].text;
 
         // 2. Format the WhatsApp Message
-        const message = `*New Order Request*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Service:* ${serviceText}\n*Estimated Weight:* ${weight} Kg\n\nPlease process my request!`;
+        const message = `*New Order Request*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Service:* ${serviceText}\n*Estimated Weight:* ${weight} Kg\n*Delivery Option:* ${deliveryText}\n\nPlease process my request!`;
         
         // 3. Encode the message for the URL
         const encodedMessage = encodeURIComponent(message);
