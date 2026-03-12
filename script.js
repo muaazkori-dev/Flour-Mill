@@ -76,10 +76,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (weight > 0 && rate > 0) {
             const total = (weight * rate).toFixed(0);
-            priceResult.textContent = `₹ ${total}`;
+            priceResult.textContent = `Rs. ${total}`;
             priceResult.style.color = "var(--primary-color)";
         } else {
-            priceResult.textContent = "₹ --";
+            priceResult.textContent = "Rs. --";
             priceResult.style.color = "var(--primary-light)";
         }
     }
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const msgEl = document.getElementById('pincodeMsg');
 
     // Dummy workable pincodes for Demo
-    const validPincodes = ['110001', '110002', '122001', '122018', '201301'];
+    const validPincodes = ['46000', '44000', '54000', '74200', '38000'];
 
     checkBtn.addEventListener('click', () => {
         const code = pincodeInput.value.trim();
