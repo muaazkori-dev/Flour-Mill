@@ -292,9 +292,10 @@ img {
 }
 
 .hero h1 {
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-size: clamp(2rem, 8vw, 4.5rem);
     margin-bottom: 1.5rem;
     text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    line-height: 1.25;
 }
 
 .hero p {
@@ -319,7 +320,7 @@ img {
 }
 
 .section-header h2 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 6vw, 2.5rem);
     margin-bottom: 1rem;
 }
 
@@ -333,7 +334,7 @@ img {
 /* --- Services Section --- */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 2rem;
 }
 
@@ -409,7 +410,7 @@ img {
 
 .calculator-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
     gap: 3rem;
     max-width: 1000px;
     margin: 0 auto;
@@ -500,8 +501,9 @@ input:focus, select:focus {
 }
 
 .booking-content h2 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 8vw, 3rem);
     margin-bottom: 1rem;
+    line-height: 1.2;
 }
 
 .booking-content > p {
@@ -543,8 +545,11 @@ input:focus, select:focus {
 
 .booking-form {
     flex: 1;
-    min-width: 350px;
+    min-width: min(100%, 350px);
+    width: 100%;
     padding: 3rem;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .booking-form h3 {
@@ -701,7 +706,14 @@ select option {
 }
 
 @media (max-width: 600px) {
-    .hero h1 { font-size: 2.5rem; }
-    .section { padding: 4rem 0; }
-    .booking-form { padding: 2rem; }
+    .container { width: 95%; padding: 0 0.5rem; }
+    .hero p { font-size: 1rem; margin-bottom: 1.5rem; }
+    .hero-buttons { flex-direction: column; width: 100%; gap: 1rem; }
+    .hero-buttons a { width: 100%; }
+    .section { padding: 3rem 0; }
+    .calculator-card { padding: 2rem 1.2rem; }
+    .calculator-container { gap: 1.5rem; }
+    .booking-form { padding: 1.5rem; }
+    .result-value { font-size: 2rem; }
+    .input-group label { font-size: 0.9rem; }
 }
