@@ -22,10 +22,15 @@
                 <i class="fa-solid fa-wheat-awn"></i>
                 Flour<span>Mill</span>
             </a>
+            <div class="lang-toggle">
+               <button id="lang-en" class="active">EN</button>
+               <span class="lang-sep">|</span>
+               <button id="lang-ur">UR</button>
+            </div>
             <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#calculators">Calculators</a></li>
-                <li><a href="#booking" class="btn-primary">Book Now</a></li>
+                <li><a href="#services" data-i18n="nav_services">Services</a></li>
+                <li><a href="#calculators" data-i18n="nav_calculators">Calculators</a></li>
+                <li><a href="#booking" class="btn-primary" data-i18n="nav_book_now">Book Now</a></li>
             </ul>
             <div class="mobile-menu-btn">
                 <i class="fa-solid fa-bars"></i>
@@ -37,12 +42,12 @@
     <header class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <span class="badge">Pure & Fresh</span>
-            <h1 class="bounce-in">Experience the Finest<br> <span class="text-gradient">Atta Grinding</span></h1>
-            <p class="fade-in-up">We deliver freshly ground, 100% pure flour customized to your needs. Healthy, unadulterated, and delivered right to your doorstep.</p>
+            <span class="badge" data-i18n="hero_badge">Pure & Fresh</span>
+            <h1 class="bounce-in" data-i18n="hero_title">Experience the Finest<br> <span class="text-gradient">Atta Grinding</span></h1>
+            <p class="fade-in-up" data-i18n="hero_desc">We deliver freshly ground, 100% pure flour customized to your needs. Healthy, unadulterated, and delivered right to your doorstep.</p>
             <div class="hero-buttons fade-in-up-delay">
-                <a href="#booking" class="btn-primary btn-large">Order Fresh Atta</a>
-                <a href="#calculators" class="btn-secondary btn-large"><i class="fa-solid fa-calculator"></i> Price Estimator</a>
+                <a href="#booking" class="btn-primary btn-large" data-i18n="hero_btn_order">Order Fresh Atta</a>
+                <a href="#calculators" class="btn-secondary btn-large" data-i18n="hero_btn_price"><i class="fa-solid fa-calculator"></i> Price Estimator</a>
             </div>
         </div>
     </header>
@@ -51,31 +56,31 @@
     <section id="services" class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Our Premium <span class="text-gradient">Grains</span></h2>
-                <p>We grind a wide variety of grains to perfection, maintaining all nutritional value.</p>
+                <h2 data-i18n="services_heading">Our Premium <span class="text-gradient">Grains</span></h2>
+                <p data-i18n="services_desc">We grind a wide variety of grains to perfection, maintaining all nutritional value.</p>
             </div>
             
             <div class="services-grid">
                 <!-- Card 1 -->
                 <div class="service-card glass-card hover-lift">
                     <div class="card-icon"><i class="fa-solid fa-seedling"></i></div>
-                    <h3>Whole Wheat (Chakki Fresh)</h3>
-                    <p>100% whole grain wheat ground to preserve maximum fiber and nutrients. Best for daily soft rotis.</p>
-                    <span class="price-tag">Rs. 120 / Kg</span>
+                    <h3 data-i18n="service_1_title">Whole Wheat (Chakki Fresh)</h3>
+                    <p data-i18n="service_1_desc">100% whole grain wheat ground to preserve maximum fiber and nutrients. Best for daily soft rotis.</p>
+                    <span class="price-tag" data-i18n="service_1_price">Rs. 120 / Kg</span>
                 </div>
                 <!-- Card 2 -->
                 <div class="service-card glass-card hover-lift">
                     <div class="card-icon"><i class="fa-solid fa-leaf"></i></div>
-                    <h3>Multigrain Atta</h3>
-                    <p>A healthier blend of wheat, chana, soya, oats, and ragi for an extra protein and fiber boost.</p>
-                    <span class="price-tag">Rs. 250 / Kg</span>
+                    <h3 data-i18n="service_2_title">Multigrain Atta</h3>
+                    <p data-i18n="service_2_desc">A healthier blend of wheat, chana, soya, oats, and ragi for an extra protein and fiber boost.</p>
+                    <span class="price-tag" data-i18n="service_2_price">Rs. 250 / Kg</span>
                 </div>
                 <!-- Card 3 -->
                 <div class="service-card glass-card hover-lift">
                     <div class="card-icon"><i class="fa-solid fa-bowl-rice"></i></div>
-                    <h3>Pure Besan (Gram Flour)</h3>
-                    <p>Finely ground pure Chana Dal besan, perfect for pakoras, laddoos, and traditional dishes.</p>
-                    <span class="price-tag">Rs. 300 / Kg</span>
+                    <h3 data-i18n="service_3_title">Pure Besan (Gram Flour)</h3>
+                    <p data-i18n="service_3_desc">Finely ground pure Chana Dal besan, perfect for pakoras, laddoos, and traditional dishes.</p>
+                    <span class="price-tag" data-i18n="service_3_price">Rs. 300 / Kg</span>
                 </div>
             </div>
         </div>
@@ -85,43 +90,43 @@
     <section id="calculators" class="section bg-light">
         <div class="container">
             <div class="section-header">
-                <h2>Smart <span class="text-gradient">Calculators</span></h2>
-                <p>Estimate your grinding output and pricing instantly.</p>
+                <h2 data-i18n="calc_heading">Smart <span class="text-gradient">Calculators</span></h2>
+                <p data-i18n="calc_desc">Estimate your grinding output and pricing instantly.</p>
             </div>
 
             <div class="calculator-container">
                 <!-- Wheat to Flour -->
                 <div class="calculator-card glass-card">
-                    <h3><i class="fa-solid fa-scale-balanced"></i> Flour Output Estimator</h3>
-                    <p class="calc-desc">Calculate how much flour you'll get from your raw wheat (assuming ~5% moisture/bran loss).</p>
+                    <h3 data-i18n="flour_title"><i class="fa-solid fa-scale-balanced"></i> Flour Output Estimator</h3>
+                    <p class="calc-desc" data-i18n="flour_desc">Calculate how much flour you'll get from your raw wheat (assuming ~5% moisture/bran loss).</p>
                     
                     <div class="input-group">
-                        <label for="wheatWeight">Raw Wheat Weight (Kg)</label>
+                        <label for="wheatWeight" data-i18n="flour_label_wheat">Raw Wheat Weight (Kg)</label>
                         <input type="number" id="wheatWeight" placeholder="e.g., 50" min="1">
                     </div>
                     
                     <div class="result-box" id="flourResultBox">
-                        <h4>Expected Flour Output:</h4>
+                        <h4 data-i18n="flour_expected">Expected Flour Output:</h4>
                         <div class="result-value" id="flourResult">-- Kg</div>
                     </div>
                 </div>
 
                 <!-- Grinding Price -->
                 <div class="calculator-card glass-card">
-                    <h3><i class="fa-solid fa-coins"></i> Grinding Price Calculator</h3>
-                    <p class="calc-desc">Calculate the total cost for grinding your grains based on weight and standard rates.</p>
+                    <h3 data-i18n="price_title"><i class="fa-solid fa-coins"></i> Grinding Price Calculator</h3>
+                    <p class="calc-desc" data-i18n="price_desc">Calculate the total cost for grinding your grains based on weight and standard rates.</p>
                     
                     <div class="input-group">
-                        <label for="grindWeight">Total Weight to Grind (Kg)</label>
+                        <label for="grindWeight" data-i18n="price_label_weight">Total Weight to Grind (Kg)</label>
                         <input type="number" id="grindWeight" placeholder="e.g., 50" min="1">
                     </div>
                     <div class="input-group">
-                        <label for="grindRate">Rate Per Kg (Rs.)</label>
-                        <input type="number" id="grindRate" value="5" placeholder="e.g., 5" min="1">
+                        <label for="grindRate" data-i18n="price_label_rate">Rate Per Kg (Rs.)</label>
+                        <input type="number" id="grindRate" value="8" placeholder="8" min="1" readonly style="opacity: 0.8; cursor: not-allowed;">
                     </div>
                     
                     <div class="result-box" id="priceResultBox">
-                        <h4>Total Grinding Cost:</h4>
+                        <h4 data-i18n="price_total_cost">Total Grinding Cost:</h4>
                         <div class="result-value" id="priceResult">Rs. --</div>
                     </div>
                 </div>
@@ -134,55 +139,55 @@
         <div class="container booking-container">
             
             <div class="booking-content">
-                <h2>Ready to <span class="text-gradient">Order?</span></h2>
-                <p>Book your pickup or order fresh atta directly. We ensure hygienic processing and timely delivery.</p>
+                <h2 data-i18n="booking_heading">Ready to <span class="text-gradient">Order?</span></h2>
+                <p data-i18n="booking_desc">Book your pickup or order fresh atta directly. We ensure hygienic processing and timely delivery.</p>
                 
                 <div class="delivery-checker glassmorphism">
-                    <h3><i class="fa-solid fa-truck-fast"></i> Delivery Area</h3>
-                    <p style="margin-top: 10px; font-weight: 500; font-size: 1.1rem; color: var(--text-color);">We deliver across the entire <strong>Sanghar District</strong>.</p>
+                    <h3 data-i18n="delivery_area_title"><i class="fa-solid fa-truck-fast"></i> Delivery Area</h3>
+                    <p style="margin-top: 10px; font-weight: 500; font-size: 1.1rem; color: var(--text-color);" data-i18n="delivery_area_desc">We deliver across the entire <strong>Sanghar District</strong>.</p>
                 </div>
             </div>
 
             <form id="bookingForm" class="glass-card booking-form">
-                <h3>Book a Service</h3>
+                <h3 data-i18n="form_title">Book a Service</h3>
                 <div class="form-group">
-                    <label>Full Name</label>
+                    <label data-i18n="form_label_name">Full Name</label>
                     <input type="text" id="custName" required placeholder="John Doe">
                 </div>
                 <div class="form-group">
-                    <label>Phone Number</label>
+                    <label data-i18n="form_label_phone">Phone Number</label>
                     <input type="tel" id="custPhone" required placeholder="+92 3XXXXXXXXX">
                 </div>
                 <div class="form-group">
-                    <label>Service Type</label>
+                    <label data-i18n="form_label_service">Service Type</label>
                     <select id="custService" required>
-                        <option value="">Select Service</option>
-                        <option value="buy_atta">Buy Fresh Atta</option>
-                        <option value="grinding">Book Grain Grinding</option>
+                        <option value="" data-i18n="form_opt_default">Select Service</option>
+                        <option value="buy_atta" data-i18n="form_opt_buy">Buy Fresh Atta</option>
+                        <option value="grinding" data-i18n="form_opt_grind">Book Grain Grinding</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Estimated Weight (Kg)</label>
+                    <label data-i18n="form_label_weight">Estimated Weight (Kg)</label>
                     <input type="number" id="custWeight" required placeholder="e.g., 20">
                 </div>
                 <div class="form-group">
-                    <label>Delivery Option</label>
+                    <label data-i18n="form_label_delivery">Delivery Option</label>
                     <div class="radio-group" style="display: flex; gap: 1rem; margin-top: 0.5rem;">
                         <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
                             <input type="radio" name="deliveryOption" value="home_delivery" id="radioHome" required>
-                            Home Delivery
+                            <span data-i18n="form_rad_home">Home Delivery</span>
                         </label>
                         <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
                             <input type="radio" name="deliveryOption" value="self_pickup" id="radioPickup" required>
-                            Self Pickup
+                            <span data-i18n="form_rad_pickup">Self Pickup</span>
                         </label>
                     </div>
                 </div>
                 <div class="form-group" id="addressGroup" style="display: none;">
-                    <label>Delivery Address</label>
+                    <label data-i18n="form_label_address">Delivery Address</label>
                     <textarea id="custAddress" rows="2" placeholder="Enter your full Sanghar Delivery Address..." style="width: 100%; padding: 0.8rem; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; background: rgba(0, 0, 0, 0.4); color: white;"></textarea>
                 </div>
-                <button type="submit" class="btn-primary w-100">Submit Request <i class="fa-solid fa-arrow-right"></i></button>
+                <button type="submit" class="btn-primary w-100" data-i18n="form_btn_submit">Submit Request <i class="fa-solid fa-arrow-right"></i></button>
             </form>
 
         </div>
@@ -195,33 +200,34 @@
                 <a href="#" class="logo">
                     <i class="fa-solid fa-wheat-awn"></i> Flour<span>Mill</span>
                 </a>
-                <p>Delivering purity, health, and taste directly from our chakki to your kitchen.</p>
+                <p data-i18n="footer_desc">Delivering purity, health, and taste directly from our chakki to your kitchen.</p>
             </div>
             
             <div class="footer-links">
-                <h4>Quick Links</h4>
+                <h4 data-i18n="footer_links_title">Quick Links</h4>
                 <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#calculators">Calculators</a></li>
-                    <li><a href="#booking">Book Order</a></li>
+                    <li><a href="#services" data-i18n="nav_services">Services</a></li>
+                    <li><a href="#calculators" data-i18n="nav_calculators">Calculators</a></li>
+                    <li><a href="#booking" data-i18n="footer_link_book">Book Order</a></li>
                 </ul>
             </div>
             
             <div class="footer-contact">
-                <h4>Contact Us</h4>
+                <h4 data-i18n="footer_contact_title">Contact Us</h4>
                 <p><i class="fa-solid fa-phone"></i> +92 309 2958669</p>
                 <p><i class="fa-solid fa-envelope"></i> h11706763@gmail.com</p>
-                <p><i class="fa-solid fa-map-pin"></i> Muhalla Ahmed-Abad Qabrustan Road Tando adam</p>
+                <p data-i18n="footer_address"><i class="fa-solid fa-map-pin"></i> Muhalla Ahmed-Abad Qabrustan Road Tando adam</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Flour Mill. All rights reserved.</p>
+            <p data-i18n="footer_copyright">&copy; 2026 Flour Mill. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Toast Notification -->
     <div id="toast" class="toast"></div>
 
+    <script src="lang.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

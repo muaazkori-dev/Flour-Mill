@@ -8,6 +8,47 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    /* --- Language Toggler --- */
+    const btnEn = document.getElementById('lang-en');
+    const btnUr = document.getElementById('lang-ur');
+    const elementsToTranslate = document.querySelectorAll('[data-i18n]');
+
+    // Function to apply language
+    function setLanguage(lang) {
+        // Update HTML attributes
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ur' ? 'rtl' : 'ltr';
+
+        // Update active button state
+        if (lang === 'ur') {
+            btnUr.classList.add('active');
+            btnEn.classList.remove('active');
+        } else {
+            btnEn.classList.add('active');
+            btnUr.classList.remove('active');
+        }
+
+        // Translate text
+        elementsToTranslate.forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[key] && translations[key][lang]) {
+                el.innerHTML = translations[key][lang];
+            }
+        });
+
+        // Save preference
+        localStorage.setItem('flourMill_language', lang);
+    }
+
+    // Load saved language on startup or default to EN
+    const savedLang = localStorage.getItem('flourMill_language') || 'en';
+    setLanguage(savedLang);
+
+    // Event Listeners for toggle buttons
+    btnEn.addEventListener('click', () => setLanguage('en'));
+    btnUr.addEventListener('click', () => setLanguage('ur'));
+
+
     /* --- Navbar Scroll Effect --- */
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
