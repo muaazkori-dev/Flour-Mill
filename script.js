@@ -87,40 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     grindWeightInput.addEventListener('input', calculatePrice);
     grindRateInput.addEventListener('input', calculatePrice);
 
-    /* --- Delivery Checker --- */
-    const pincodeInput = document.getElementById('pincode');
-    const checkBtn = document.getElementById('checkPincodeBtn');
-    const msgEl = document.getElementById('pincodeMsg');
-
-    // Dummy workable pincodes for Demo
-    const validPincodes = ['46000', '44000', '54000', '74200', '38000'];
-
-    checkBtn.addEventListener('click', () => {
-        const code = pincodeInput.value.trim();
-        msgEl.className = 'pincode-msg'; // Reset class
-        
-        if (code.length < 5) {
-            msgEl.textContent = 'Please enter a valid pincode.';
-            msgEl.classList.add('msg-error');
-            return;
-        }
-
-        // Simulate API verification delay
-        checkBtn.textContent = 'Checking...';
-        checkBtn.disabled = true;
-
-        setTimeout(() => {
-            if (validPincodes.includes(code)) {
-                msgEl.innerHTML = '<i class="fa-solid fa-circle-check"></i> Great! We deliver to your area.';
-                msgEl.classList.add('msg-success');
-            } else {
-                msgEl.innerHTML = '<i class="fa-solid fa-circle-xmark"></i> Sorry, we currently don\'t serve this area.';
-                msgEl.classList.add('msg-error');
-            }
-            checkBtn.textContent = 'Check';
-            checkBtn.disabled = false;
-        }, 800);
-    });
+    /* --- Delivery Checker Removed (Now serves entire Sanghar District) --- */
 
 
     /* --- Booking Form Submission --- */
