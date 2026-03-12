@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flour Mill - Premium Ata Chakki</title>
+    <meta name="description" content="Premium Flour Mill services offering fresh, pure, and customized grinding. Check delivery, calculate prices, and book online.">
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar glassmorphism">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-wheat-awn"></i>
+                Flour<span>Mill</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#calculators">Calculators</a></li>
+                <li><a href="#booking" class="btn-primary">Book Now</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="badge">Pure & Fresh</span>
+            <h1 class="bounce-in">Experience the Finest<br> <span class="text-gradient">Atta Grinding</span></h1>
+            <p class="fade-in-up">We deliver freshly ground, 100% pure flour customized to your needs. Healthy, unadulterated, and delivered right to your doorstep.</p>
+            <div class="hero-buttons fade-in-up-delay">
+                <a href="#booking" class="btn-primary btn-large">Order Fresh Atta</a>
+                <a href="#calculators" class="btn-secondary btn-large"><i class="fa-solid fa-calculator"></i> Price Estimator</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Premium <span class="text-gradient">Grains</span></h2>
+                <p>We grind a wide variety of grains to perfection, maintaining all nutritional value.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <div class="service-card glass-card hover-lift">
+                    <div class="card-icon"><i class="fa-solid fa-seedling"></i></div>
+                    <h3>Whole Wheat (Chakki Fresh)</h3>
+                    <p>100% whole grain wheat ground to preserve maximum fiber and nutrients. Best for daily soft rotis.</p>
+                    <span class="price-tag">₹45 / Kg</span>
+                </div>
+                <!-- Card 2 -->
+                <div class="service-card glass-card hover-lift">
+                    <div class="card-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <h3>Multigrain Atta</h3>
+                    <p>A healthier blend of wheat, chana, soya, oats, and ragi for an extra protein and fiber boost.</p>
+                    <span class="price-tag">₹60 / Kg</span>
+                </div>
+                <!-- Card 3 -->
+                <div class="service-card glass-card hover-lift">
+                    <div class="card-icon"><i class="fa-solid fa-bowl-rice"></i></div>
+                    <h3>Pure Besan (Gram Flour)</h3>
+                    <p>Finely ground pure Chana Dal besan, perfect for pakoras, laddoos, and traditional dishes.</p>
+                    <span class="price-tag">₹85 / Kg</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculators Section -->
+    <section id="calculators" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Smart <span class="text-gradient">Calculators</span></h2>
+                <p>Estimate your grinding output and pricing instantly.</p>
+            </div>
+
+            <div class="calculator-container">
+                <!-- Wheat to Flour -->
+                <div class="calculator-card glass-card">
+                    <h3><i class="fa-solid fa-scale-balanced"></i> Flour Output Estimator</h3>
+                    <p class="calc-desc">Calculate how much flour you'll get from your raw wheat (assuming ~5% moisture/bran loss).</p>
+                    
+                    <div class="input-group">
+                        <label for="wheatWeight">Raw Wheat Weight (Kg)</label>
+                        <input type="number" id="wheatWeight" placeholder="e.g., 50" min="1">
+                    </div>
+                    
+                    <div class="result-box" id="flourResultBox">
+                        <h4>Expected Flour Output:</h4>
+                        <div class="result-value" id="flourResult">-- Kg</div>
+                    </div>
+                </div>
+
+                <!-- Grinding Price -->
+                <div class="calculator-card glass-card">
+                    <h3><i class="fa-solid fa-coins"></i> Grinding Price Calculator</h3>
+                    <p class="calc-desc">Calculate the total cost for grinding your grains based on weight and standard rates.</p>
+                    
+                    <div class="input-group">
+                        <label for="grindWeight">Total Weight to Grind (Kg)</label>
+                        <input type="number" id="grindWeight" placeholder="e.g., 50" min="1">
+                    </div>
+                    <div class="input-group">
+                        <label for="grindRate">Rate Per Kg (₹)</label>
+                        <input type="number" id="grindRate" value="5" placeholder="e.g., 5" min="1">
+                    </div>
+                    
+                    <div class="result-box" id="priceResultBox">
+                        <h4>Total Grinding Cost:</h4>
+                        <div class="result-value" id="priceResult">₹ --</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking / Delivery Checker -->
+    <section id="booking" class="section">
+        <div class="container booking-container">
+            
+            <div class="booking-content">
+                <h2>Ready to <span class="text-gradient">Order?</span></h2>
+                <p>Book your pickup or order fresh atta directly. We ensure hygienic processing and timely delivery.</p>
+                
+                <div class="delivery-checker glassmorphism">
+                    <h3><i class="fa-solid fa-location-dot"></i> Check Delivery Availability</h3>
+                    <div class="checker-flex">
+                        <input type="text" id="pincode" placeholder="Enter your Pincode (e.g. 110001)">
+                        <button id="checkPincodeBtn" class="btn-secondary">Check</button>
+                    </div>
+                    <p id="pincodeMsg" class="pincode-msg"></p>
+                </div>
+            </div>
+
+            <form id="bookingForm" class="glass-card booking-form">
+                <h3>Book a Service</h3>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" required placeholder="+91 XXXXXXXXXX">
+                </div>
+                <div class="form-group">
+                    <label>Service Type</label>
+                    <select required>
+                        <option value="">Select Service</option>
+                        <option value="buy_atta">Buy Fresh Atta</option>
+                        <option value="grinding">Book Grain Grinding</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Estimated Weight (Kg)</label>
+                    <input type="number" required placeholder="e.g., 20">
+                </div>
+                <button type="submit" class="btn-primary w-100">Submit Request <i class="fa-solid fa-arrow-right"></i></button>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <i class="fa-solid fa-wheat-awn"></i> Flour<span>Mill</span>
+                </a>
+                <p>Delivering purity, health, and taste directly from our chakki to your kitchen.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#calculators">Calculators</a></li>
+                    <li><a href="#booking">Book Order</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fa-solid fa-envelope"></i> hello@flourmill.com</p>
+                <p><i class="fa-solid fa-map-pin"></i> 123 Grain Market, Main City, India</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Flour Mill. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
