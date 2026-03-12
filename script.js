@@ -93,6 +93,26 @@ document.addEventListener('DOMContentLoaded', () => {
     /* --- WhatsApp Booking Form Submission --- */
     const bookingForm = document.getElementById('bookingForm');
     
+    // Address Field Toggle Logic
+    const radioHome = document.getElementById('radioHome');
+    const radioPickup = document.getElementById('radioPickup');
+    const addressGroup = document.getElementById('addressGroup');
+    const custAddress = document.getElementById('custAddress');
+
+    radioHome.addEventListener('change', () => {
+        if(radioHome.checked) {
+            addressGroup.style.display = 'block';
+            custAddress.required = true;
+        }
+    });
+
+    radioPickup.addEventListener('change', () => {
+        if(radioPickup.checked) {
+            addressGroup.style.display = 'none';
+            custAddress.required = false;
+        }
+    });
+
     bookingForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
@@ -102,11 +122,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const serviceNode = document.getElementById('custService');
         const serviceText = serviceNode.options[serviceNode.selectedIndex].text;
         const weight = document.getElementById('custWeight').value.trim();
-        const deliveryNode = document.getElementById('custDelivery');
-        const deliveryText = deliveryNode.options[deliveryNode.selectedIndex].text;
+        
+        // Get Radio Button Value
+        const deliveryOption = document.querySelector('input[name="deliveryOption"]:checked');
+        const deliveryChoice = deliveryOption ? deliveryOption.value : '';
+        const deliveryText = deliveryChoice === 'home_delivery' ? 'Home Delivery' : 'Self Pickup';
+        
+        // Get Address if Home Delivery
+        let addressText = "";
+        if(deliveryChoice === 'home_delivery') {
+            addressText = `\n*Delivery Address:* ${custAddress.value.trim()}`;
+        }
 
         // 2. Format the WhatsApp Message
-        const message = `*New Order Request*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Service:* ${serviceText}\n*Estimated Weight:* ${weight} Kg\n*Delivery Option:* ${deliveryText}\n\nPlease process my request!`;
+        const message = `*New Order Request*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Service:* ${serviceText}\n*Estimated Weight:* ${weight} Kg\n*Delivery Option:* ${deliveryText}${addressText}\n\nPlease process my request!`;
         
         // 3. Encode the message for the URL
         const encodedMessage = encodeURIComponent(message);

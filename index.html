@@ -167,11 +167,20 @@
                 </div>
                 <div class="form-group">
                     <label>Delivery Option</label>
-                    <select id="custDelivery" required>
-                        <option value="">Select Option</option>
-                        <option value="home_delivery">Home Delivery</option>
-                        <option value="self_pickup">Self Pickup</option>
-                    </select>
+                    <div class="radio-group" style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                            <input type="radio" name="deliveryOption" value="home_delivery" id="radioHome" required>
+                            Home Delivery
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 500;">
+                            <input type="radio" name="deliveryOption" value="self_pickup" id="radioPickup" required>
+                            Self Pickup
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group" id="addressGroup" style="display: none;">
+                    <label>Delivery Address</label>
+                    <textarea id="custAddress" rows="2" placeholder="Enter your full Sanghar Delivery Address..." style="width: 100%; padding: 0.8rem; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; background: rgba(0, 0, 0, 0.4); color: white;"></textarea>
                 </div>
                 <button type="submit" class="btn-primary w-100">Submit Request <i class="fa-solid fa-arrow-right"></i></button>
             </form>
