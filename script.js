@@ -90,25 +90,35 @@ document.addEventListener('DOMContentLoaded', () => {
     /* --- Delivery Checker Removed (Now serves entire Sanghar District) --- */
 
 
-    /* --- Booking Form Submission --- */
+    /* --- WhatsApp Booking Form Submission --- */
     const bookingForm = document.getElementById('bookingForm');
     
     bookingForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        const btn = bookingForm.querySelector('button[type="submit"]');
-        const originalText = btn.innerHTML;
+        // 1. Get form values
+        const name = document.getElementById('custName').value.trim();
+        const phone = document.getElementById('custPhone').value.trim();
+        const serviceNode = document.getElementById('custService');
+        const serviceText = serviceNode.options[serviceNode.selectedIndex].text;
+        const weight = document.getElementById('custWeight').value.trim();
+
+        // 2. Format the WhatsApp Message
+        const message = `*New Order Request*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Service:* ${serviceText}\n*Estimated Weight:* ${weight} Kg\n\nPlease process my request!`;
         
-        btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing...';
-        btn.disabled = true;
+        // 3. Encode the message for the URL
+        const encodedMessage = encodeURIComponent(message);
         
-        // Simulate fake network request
-        setTimeout(() => {
-            showToast("Order Placed Successfully! We will contact you soon.");
-            bookingForm.reset();
-            btn.innerHTML = originalText;
-            btn.disabled = false;
-        }, 1500);
+        // 4. Your WhatsApp Number (must include country code without '+')
+        const whatsappNumber = "923337155323"; 
+
+        // 5. Open WhatsApp URL
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+        window.open(whatsappURL, '_blank');
+        
+        // Optional: Reset form or show a success toast on website
+        showToast("Redirecting to WhatsApp...");
+        bookingForm.reset();
     });
 
     /* --- Toast Notification Helper --- */

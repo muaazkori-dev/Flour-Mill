@@ -147,15 +147,15 @@
                 <h3>Book a Service</h3>
                 <div class="form-group">
                     <label>Full Name</label>
-                    <input type="text" required placeholder="John Doe">
+                    <input type="text" id="custName" required placeholder="John Doe">
                 </div>
                 <div class="form-group">
                     <label>Phone Number</label>
-                    <input type="tel" required placeholder="+92 3XXXXXXXXX">
+                    <input type="tel" id="custPhone" required placeholder="+92 3XXXXXXXXX">
                 </div>
                 <div class="form-group">
                     <label>Service Type</label>
-                    <select required>
+                    <select id="custService" required>
                         <option value="">Select Service</option>
                         <option value="buy_atta">Buy Fresh Atta</option>
                         <option value="grinding">Book Grain Grinding</option>
@@ -163,7 +163,7 @@
                 </div>
                 <div class="form-group">
                     <label>Estimated Weight (Kg)</label>
-                    <input type="number" required placeholder="e.g., 20">
+                    <input type="number" id="custWeight" required placeholder="e.g., 20">
                 </div>
                 <button type="submit" class="btn-primary w-100">Submit Request <i class="fa-solid fa-arrow-right"></i></button>
             </form>
